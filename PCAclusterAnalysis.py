@@ -7,6 +7,9 @@ from sklearn.cluster import KMeans
 from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
 from keras.preprocessing.image import load_img 
+from sklearn.metrics import silhouette_score
+from sklearn.metrics import davies_bouldin_score
+from sklearn.metrics import calinski_harabasz_score
 
 #put your subnetresponse csv from the previous code
 
@@ -33,6 +36,15 @@ for i in u_labels:
     plt.scatter(x[label == i , 0] , x[label == i , 1] , label = i)
 #plt.savefig(f'PCAscatter.png')
 plt.show()
+
+#Statistical analysis of clustering performance
+
+db = davies_bouldin_score(x, label)
+print(db)
+sc = silhouette_score(x, label)
+print(sc)
+ch = calinski_harabasz_score(x, label)
+print(ch)
 
 #CODE BELOW IS JUST FOR VIEWING CREATED CLUSTERS
 
