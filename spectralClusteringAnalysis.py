@@ -8,6 +8,7 @@ from sklearn.preprocessing import StandardScaler
 import matplotlib.pyplot as plt
 from keras.preprocessing.image import load_img 
 from sklearn.manifold import TSNE
+from sklearn.decomposition import PCA
 from sklearn.metrics import silhouette_score
 from sklearn.metrics import davies_bouldin_score
 from sklearn.metrics import calinski_harabasz_score
