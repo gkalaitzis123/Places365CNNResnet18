@@ -1,10 +1,9 @@
 #TO BE USED AFTER Layer8ResponseCollector
-#Purpose: cluster the responses of the subnet without any methods of dimensionality reduction. This is solely for the purpose of manually inspecting what pictures are clustering.
+#Purpose: cluster and analyze responses using spectral clustering.
 
 import pandas as pd
 import numpy as np
 from sklearn.cluster import SpectralClustering
-from sklearn.preprocessing import StandardScaler
 import matplotlib.pyplot as plt
 from keras.preprocessing.image import load_img 
 from sklearn.manifold import TSNE
